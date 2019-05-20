@@ -70,3 +70,21 @@ bool DestroyList(SqList &L) {
 	L.length = 0;
 	return true;
 }
+
+bool DelMin(SqList & L, ElemType &e)
+{
+	if (L.length == 0) {
+		return false;
+	}
+	e = L.data[0];
+	int pos = 0;
+	for (int i = 1; i < L.length; i++) {
+		if (L.data[i] < e) {
+			e = L.data[i];
+			pos = i;
+		}
+	}
+	L.data[pos] = L.data[L.length - 1];
+	L.length--;
+	return true;
+}

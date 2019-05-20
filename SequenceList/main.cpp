@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <time.h>
 #include "SequenceList.h"
 using namespace std;
 
@@ -40,6 +42,22 @@ void SeqListTest() {
 		cout << "非空表" << endl;
 }
 
+void Test_1() {
+	SqList seqList;
+	InitList(seqList);
+	srand(time(NULL));
+	for (int i = 1; i <= 5; i++) {
+		ListInsert(seqList, i, rand()%100+1);
+	}
+	cout << "随机插入五个数据:";
+	PrintList(seqList);
+	ElemType e;
+	DelMin(seqList, e);
+	cout << "删除最小值后:";
+	PrintList(seqList);
+}
+
 int main() {
-	SeqListTest();
+	//SeqListTest();
+	Test_1();
 }

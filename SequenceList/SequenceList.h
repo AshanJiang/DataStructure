@@ -37,3 +37,7 @@ bool Empty(SqList L);
 
 /*销毁表L*/
 bool DestroyList(SqList &L);
+
+//P18应用题
+/*1.删除最小值的元素(假设唯一)，空出位置由最后一个元素填补*/
+bool DelMin(SqList &L, ElemType &e);
