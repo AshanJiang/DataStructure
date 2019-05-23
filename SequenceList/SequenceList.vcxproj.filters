@@ -26,5 +26,13 @@
     <ClInclude Include="SequenceList.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LinearListSoulution.md">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

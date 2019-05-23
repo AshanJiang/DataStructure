@@ -45,7 +45,7 @@ void SeqListTest() {
 void Test_1() {
 	SqList seqList;
 	InitList(seqList);
-	srand(time(NULL));
+	srand((unsigned)time(NULL));
 	for (int i = 1; i <= 5; i++) {
 		ListInsert(seqList, i, rand()%100+1);
 	}
@@ -60,7 +60,7 @@ void Test_1() {
 void Test_2() {
 	SqList seqList;
 	InitList(seqList);
-	srand(time(NULL));
+	srand((unsigned)time(NULL));
 	for (int i = 1; i <= 5; i++) {
 		ListInsert(seqList, i, rand()%100+1);
 	}
@@ -81,8 +81,23 @@ void Test_2() {
 	PrintList(seqList);
 }
 
+void Test_3() {
+	SqList seqList;
+	InitList(seqList);
+	srand((unsigned)time(NULL));
+	for (int i = 1; i <= 10; i++) {
+		ListInsert(seqList, i, rand() % 3 + 1);
+	}
+	cout << "随机插入10个1~3的数据:";
+	PrintList(seqList);
+	DelX(seqList, 2);
+	cout << "删除2后:";
+	PrintList(seqList);
+}
+
 int main() {
 	//SeqListTest();
 	//Test_1();
-	Test_2();
+	//Test_2();
+	Test_3();
 }

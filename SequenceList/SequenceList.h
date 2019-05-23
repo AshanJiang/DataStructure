@@ -43,3 +43,5 @@ bool DestroyList(SqList &L);
 bool DelMin(SqList &L, ElemType &e);
 /*2.逆置L元素，空间复杂度为O(1)*/
 void Reverse(SqList &L);
+/*3.删除线性表中所有值为x的元素,时间O(n)，空间O(1)*/
+void DelX(SqList &L, ElemType x);
