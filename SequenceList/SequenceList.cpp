@@ -111,3 +111,26 @@ void DelX(SqList & L, ElemType x)
 	L.length -= k;
 }
 
+bool Del_s_t(SqList & L, ElemType s, ElemType t)
+{
+	if (s >= t || L.length == 0)
+		return false;
+	int i, j, k = 0;
+	for (i = 0; i < L.length; i++) {
+		if (L.data[i] >= s)
+			break;
+	}
+	if (i >= L.length)
+		return false;
+	for (j = i; j < L.length; j++) {
+		if (L.data[j] > t)
+			break;
+	}
+	k = j - i;
+	for (; j < L.length; j++) {
+		L.data[j - k] = L.data[j];
+	}
+	L.length -= k;
+	return true;
+}
+

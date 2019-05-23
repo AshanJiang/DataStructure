@@ -45,3 +45,5 @@ bool DelMin(SqList &L, ElemType &e);
 void Reverse(SqList &L);
 /*3.删除线性表中所有值为x的元素,时间O(n)，空间O(1)*/
 void DelX(SqList &L, ElemType x);
+/*删除有序顺序表中值在s和t之间的所有元素*/
+bool Del_s_t(SqList &L, ElemType s, ElemType t);

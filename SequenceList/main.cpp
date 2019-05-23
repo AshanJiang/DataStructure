@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
+#include <algorithm>
 #include "SequenceList.h"
 using namespace std;
 
@@ -95,9 +96,25 @@ void Test_3() {
 	PrintList(seqList);
 }
 
+void Test_4() {
+	SqList seqList;
+	InitList(seqList);
+	srand((unsigned)time(NULL));
+	for (int i = 1; i <= 20; i++) {
+		ListInsert(seqList, i, rand() % 10 + 1);
+	}
+	sort(seqList.data, seqList.data+20);
+	cout << "随机插入20个1~10的数据，并排序:" << endl;
+	PrintList(seqList);
+	Del_s_t(seqList, 3, 5);
+	cout << "删除3-5之间的数后:" << endl;
+	PrintList(seqList);
+}
+
 int main() {
 	//SeqListTest();
 	//Test_1();
 	//Test_2();
-	Test_3();
+	//Test_3();
+	Test_4();
 }
