@@ -88,3 +88,13 @@ bool DelMin(SqList & L, ElemType &e)
 	L.length--;
 	return true;
 }
+
+void Reverse(SqList & L)
+{
+	ElemType temp;
+	for (int i = 0; i < L.length / 2; i++) {
+		temp = L.data[i];
+		L.data[i] = L.data[L.length - i - 1];
+		L.data[L.length - i - 1] = temp;
+	}
+}

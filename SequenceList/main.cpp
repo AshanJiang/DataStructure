@@ -57,8 +57,32 @@ void Test_1() {
 	PrintList(seqList);
 }
 
+void Test_2() {
+	SqList seqList;
+	InitList(seqList);
+	srand(time(NULL));
+	for (int i = 1; i <= 5; i++) {
+		ListInsert(seqList, i, rand()%100+1);
+	}
+	cout << "随机插入5个数据:";
+	PrintList(seqList);
+	Reverse(seqList);
+	cout << "颠倒顺序后:";
+	PrintList(seqList);
+
+	InitList(seqList);
+	for (int i = 1; i <= 6; i++) {
+		ListInsert(seqList, i, rand()%100+1);
+	}
+	cout << "随机插入6个数据:";
+	PrintList(seqList);
+	Reverse(seqList);
+	cout << "颠倒顺序后:";
+	PrintList(seqList);
+}
+
 int main() {
 	//SeqListTest();
-	Test_1();
-
+	//Test_1();
+	Test_2();
 }
