@@ -134,3 +134,18 @@ bool Del_s_t(SqList & L, ElemType s, ElemType t)
 	return true;
 }
 
+bool Del_s_t_2(SqList & L, ElemType s, ElemType t)
+{
+	if (s >= t || L.length == 0)
+		return false;
+	int k = 0;
+	for (int i = 0; i < L.length; i++) {
+		if (L.data[i] >= s && L.data[i] <= t)
+			k++;
+		else
+			L.data[i - k] = L.data[i];
+	}
+	L.length -= k;
+	return true;
+}
+

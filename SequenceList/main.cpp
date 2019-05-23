@@ -111,10 +111,27 @@ void Test_4() {
 	PrintList(seqList);
 }
 
+void Test_5() {
+	SqList seqList;
+	InitList(seqList);
+	srand((unsigned)time(NULL));
+	for (int i = 1; i <= 20; i++) {
+		ListInsert(seqList, i, rand() % 10 + 1);
+	}
+	cout << "随机插入20个1~10的数据:" << endl;
+	PrintList(seqList);
+	Del_s_t_2(seqList, 3, 5);
+	cout << "删除3-5之间的数后:" << endl;
+	PrintList(seqList);
+}
+
+
+
 int main() {
 	//SeqListTest();
 	//Test_1();
 	//Test_2();
 	//Test_3();
-	Test_4();
+	//Test_4();
+	Test_5();
 }
