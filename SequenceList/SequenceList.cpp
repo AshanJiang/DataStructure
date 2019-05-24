@@ -149,3 +149,17 @@ bool Del_s_t_2(SqList & L, ElemType s, ElemType t)
 	return true;
 }
 
+bool DeleteSame(SqList & L)
+{
+	if (L.length == 0)
+		return false;
+	int i, j;		//i记录非重复元素位置，j扫描表
+	for (i = 0, j = 0; j < L.length; j++) {
+		if (L.data[i] != L.data[j]) {
+			i++;
+			L.data[i] = L.data[j];
+		}
+	}
+	L.length = i + 1;
+	return true;
+}

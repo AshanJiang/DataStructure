@@ -125,6 +125,20 @@ void Test_5() {
 	PrintList(seqList);
 }
 
+void Test_6() {
+	SqList seqList;
+	InitList(seqList);
+	srand((unsigned)time(NULL));
+	for (int i = 1; i <= 10; i++) {
+		ListInsert(seqList, i, rand() % 5 + 1);
+	}
+	sort(seqList.data, seqList.data + 10);
+	cout << "随机插入10个1~5的数据并排序:" << endl;
+	PrintList(seqList);
+	DeleteSame(seqList);
+	cout << "去重后:" << endl;
+	PrintList(seqList);
+}
 
 
 int main() {
@@ -133,5 +147,6 @@ int main() {
 	//Test_2();
 	//Test_3();
 	//Test_4();
-	Test_5();
+	//Test_5();
+	Test_6();
 }

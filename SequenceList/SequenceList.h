@@ -49,3 +49,5 @@ void DelX(SqList &L, ElemType x);
 bool Del_s_t(SqList &L, ElemType s, ElemType t);
 /*5.删除顺序表中值在s和t之间的所有元素*/
 bool Del_s_t_2(SqList &L, ElemType s, ElemType t);
+/*6.有序表中删除所有值重复的元素*/
+bool DeleteSame(SqList &L);
