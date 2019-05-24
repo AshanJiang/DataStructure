@@ -51,3 +51,5 @@ bool Del_s_t(SqList &L, ElemType s, ElemType t);
 bool Del_s_t_2(SqList &L, ElemType s, ElemType t);
 /*6.有序表中删除所有值重复的元素*/
 bool DeleteSame(SqList &L);
+/*7.合并两个有序顺序表*/
+bool Merge(SqList A, SqList B, SqList &C);

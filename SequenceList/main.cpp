@@ -140,6 +140,27 @@ void Test_6() {
 	PrintList(seqList);
 }
 
+void Test_7() {
+	SqList A,B,C;
+	InitList(A);
+	InitList(B);
+	InitList(C);
+	srand((unsigned)time(NULL));
+	for (int i = 1; i <= 5; i++) {
+		ListInsert(A, i, rand() % 10 + 1);
+		ListInsert(B, i, rand() % 10 + 1);
+	}
+	sort(A.data, A.data + 5);
+	sort(B.data, B.data + 5);
+	cout << "随机插入5个1~10的数据并排序->A:" << endl;
+	PrintList(A);
+	cout << "随机插入5个1~10的数据并排序->B:" << endl;
+	PrintList(B);
+	Merge(A, B, C);
+	cout << "合并后:" << endl;
+	PrintList(C);
+}
+
 
 int main() {
 	//SeqListTest();
@@ -148,5 +169,6 @@ int main() {
 	//Test_3();
 	//Test_4();
 	//Test_5();
-	Test_6();
+	//Test_6();
+	Test_7();
 }

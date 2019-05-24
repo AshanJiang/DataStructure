@@ -163,3 +163,33 @@ bool DeleteSame(SqList & L)
 	L.length = i + 1;
 	return true;
 }
+
+bool Merge(SqList A, SqList B, SqList & C)
+{
+	if (A.length + B.length > MaxSize)
+		return false;
+	int i = 0, j = 0, k = 0;
+	while (i < A.length&&j < B.length) {		//比较，存入结果表
+		if (A.data[i] <= B.data[j]) {
+			C.data[k] = A.data[i];
+			i++;
+		}
+		else {
+			C.data[k] = B.data[j];
+			j++;
+		}
+		k++;
+	}
+	while (i < A.length) {			//处理没比较完表的剩余数据
+		C.data[k] = A.data[i];
+		i++;
+		k++;
+	}
+	while (j < B.length) {
+		C.data[k] = B.data[j];
+		j++;
+		k++;
+	}
+	C.length = k;
+	return true;
+}
