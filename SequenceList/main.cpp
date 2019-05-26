@@ -5,6 +5,17 @@
 #include "SequenceList.h"
 using namespace std;
 
+template <typename T, std::size_t N>
+void print_array(const T(&a)[N], std::ostream& o = std::cout)
+{
+	o << "{";
+	for (std::size_t i = 0; i < N - 1; ++i)
+	{
+		o << a[i] << ", ";
+	}
+	o << a[N - 1] << "}\n";
+}
+
 //测试线性表基本功能
 void SeqListTest() {
 	//初始化顺序表
@@ -161,6 +172,11 @@ void Test_7() {
 	PrintList(C);
 }
 
+void Test_8() {
+	int A[] = { 1,2,3,7,8,9,10 };
+	Exchange(A, 3, 4, 7);
+	print_array(A);
+}
 
 int main() {
 	//SeqListTest();
@@ -170,5 +186,7 @@ int main() {
 	//Test_4();
 	//Test_5();
 	//Test_6();
-	Test_7();
+	//Test_7();
+	Test_8();
 }
+

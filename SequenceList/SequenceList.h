@@ -53,3 +53,7 @@ bool Del_s_t_2(SqList &L, ElemType s, ElemType t);
 bool DeleteSame(SqList &L);
 /*7.合并两个有序顺序表*/
 bool Merge(SqList A, SqList B, SqList &C);
+/*8.将A[m+n]中依次存放的两个线性表互换
+(a1,a2,...am,b1,b2,...bn)->(b1,b2,...bn,a1,a2,...am)*/
+void Reverse(int A[], int left, int right, int arraySize);
+void Exchange(int A[], int m, int n, int arraySize);

@@ -193,3 +193,22 @@ bool Merge(SqList A, SqList B, SqList & C)
 	C.length = k;
 	return true;
 }
+
+void Reverse(int A[], int left, int right, int arraySize)
+{
+	if (left >= right || right >= arraySize)
+		return;
+	int mid = (left + right) / 2;
+	for (int i = 0; i <= mid - left; i++) {			//注意i的判定条件，可以取数组之间任意一段，并不是从头开始的！
+		int temp = A[left + i];
+		A[left + i] = A[right - i];
+		A[right - i] = temp;
+	}
+}
+
+void Exchange(int A[], int m, int n, int arraySize)
+{
+	Reverse(A, 0, m+n-1, arraySize);
+	Reverse(A, 0, n - 1, arraySize);
+	Reverse(A, n, n + m - 1, arraySize);
+}
