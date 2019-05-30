@@ -3,6 +3,7 @@
 #include <time.h>
 #include <algorithm>
 #include "SequenceList.h"
+#include "LinkedList.h"
 using namespace std;
 
 template <typename T, std::size_t N>
@@ -52,6 +53,17 @@ void SeqListTest() {
 		cout << "空表" << endl;
 	else
 		cout << "非空表" << endl;
+}
+
+//测试链表
+void PlayWithLinkedList() {
+	LinkList L, L2;
+	List_HeadInsert(L, 10);
+	cout << "头插法生成链表:";
+	PrintList(L);
+	List_TailInsert(L2, 10);
+	cout << "尾部插法生成链表:";
+	PrintList(L2);
 }
 
 void Test_1() {
@@ -194,19 +206,10 @@ void Test_9() {
 	print_array(D);
 }
 
-//int a = 1, b = 2;
-//
-//void change(int *x)
-//{
-//	x = &b;
-//}
-//
-//void _change(int **x)
-//{
-//	*x = &b;
-//}
+
 int main() {
 	//SeqListTest();
+	PlayWithLinkedList();
 	//Test_1();
 	//Test_2();
 	//Test_3();
@@ -215,15 +218,5 @@ int main() {
 	//Test_6();
 	//Test_7();
 	//Test_8();
-	Test_9();
-
-	//int *p = &a;
-	//change(p);
-	//cout << *p << endl; //=1
-
-	//_change(&p);
-	//cout << *p << endl; //=2
-
-	//system("pause");
+	//Test_9();
 }
-
