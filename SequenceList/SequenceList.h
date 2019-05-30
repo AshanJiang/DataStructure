@@ -57,3 +57,6 @@ bool Merge(SqList A, SqList B, SqList &C);
 (a1,a2,...am,b1,b2,...bn)->(b1,b2,...bn,a1,a2,...am)*/
 void Reverse(int A[], int left, int right, int arraySize);
 void Exchange(int A[], int m, int n, int arraySize);
+/*9.递增有序线性表中查找元素，找到后和随后的元素交换，
+否则插入，并保持有序,n表示数组长度，x表示插入元素*/
+void SearchExchangeInsert(int A[],int n, int x);

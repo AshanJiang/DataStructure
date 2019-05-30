@@ -212,3 +212,29 @@ void Exchange(int A[], int m, int n, int arraySize)
 	Reverse(A, 0, n - 1, arraySize);
 	Reverse(A, n, n + m - 1, arraySize);
 }
+
+void SearchExchangeInsert(int A[], int n, int x)
+{
+	int low = 0, high = n - 1, mid;
+	while (low <= high) {			//查找
+		mid = (low + high) / 2;
+		if (A[mid] == x)
+			break;
+		else if (A[mid] < x)
+			low = mid + 1;
+		else
+			high = mid - 1;
+	}
+	if (A[mid] == x && mid != n - 1) {		//找到了，且不是最后一个元素
+		int t = A[mid];
+		A[mid] = A[mid + 1];
+		A[mid + 1] = t;
+	}
+	if (low > high) {		//没找到，在high之前插入x
+		int i;
+		for (i = n - 1; i > high; i--) {
+			A[i + 1] = A[i];
+		}
+		A[i + 1] = x;
+	}
+}

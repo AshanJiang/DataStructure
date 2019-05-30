@@ -59,7 +59,7 @@ void Test_1() {
 	InitList(seqList);
 	srand((unsigned)time(NULL));
 	for (int i = 1; i <= 5; i++) {
-		ListInsert(seqList, i, rand()%100+1);
+		ListInsert(seqList, i, rand() % 100 + 1);
 	}
 	cout << "随机插入五个数据:";
 	PrintList(seqList);
@@ -74,7 +74,7 @@ void Test_2() {
 	InitList(seqList);
 	srand((unsigned)time(NULL));
 	for (int i = 1; i <= 5; i++) {
-		ListInsert(seqList, i, rand()%100+1);
+		ListInsert(seqList, i, rand() % 100 + 1);
 	}
 	cout << "随机插入5个数据:";
 	PrintList(seqList);
@@ -84,7 +84,7 @@ void Test_2() {
 
 	InitList(seqList);
 	for (int i = 1; i <= 6; i++) {
-		ListInsert(seqList, i, rand()%100+1);
+		ListInsert(seqList, i, rand() % 100 + 1);
 	}
 	cout << "随机插入6个数据:";
 	PrintList(seqList);
@@ -114,7 +114,7 @@ void Test_4() {
 	for (int i = 1; i <= 20; i++) {
 		ListInsert(seqList, i, rand() % 10 + 1);
 	}
-	sort(seqList.data, seqList.data+20);
+	sort(seqList.data, seqList.data + 20);
 	cout << "随机插入20个1~10的数据，并排序:" << endl;
 	PrintList(seqList);
 	Del_s_t(seqList, 3, 5);
@@ -152,7 +152,7 @@ void Test_6() {
 }
 
 void Test_7() {
-	SqList A,B,C;
+	SqList A, B, C;
 	InitList(A);
 	InitList(B);
 	InitList(C);
@@ -178,6 +178,33 @@ void Test_8() {
 	print_array(A);
 }
 
+void Test_9() {
+	int A[10] = { 2,5,8,9,12,15 };
+	int B[10] = { 2,5,8,9,12,15 };
+	int C[10] = { 2,5,8,9,12,15 };
+	int D[10] = { 2,5,8,9,12,15 };
+	print_array(A);
+	SearchExchangeInsert(A, 6, 10);
+	SearchExchangeInsert(B, 6, 1);
+	SearchExchangeInsert(C, 6, 20);
+	SearchExchangeInsert(D, 6, 8);
+	print_array(A);
+	print_array(B);
+	print_array(C);
+	print_array(D);
+}
+
+//int a = 1, b = 2;
+//
+//void change(int *x)
+//{
+//	x = &b;
+//}
+//
+//void _change(int **x)
+//{
+//	*x = &b;
+//}
 int main() {
 	//SeqListTest();
 	//Test_1();
@@ -187,6 +214,16 @@ int main() {
 	//Test_5();
 	//Test_6();
 	//Test_7();
-	Test_8();
+	//Test_8();
+	Test_9();
+
+	//int *p = &a;
+	//change(p);
+	//cout << *p << endl; //=1
+
+	//_change(&p);
+	//cout << *p << endl; //=2
+
+	//system("pause");
 }
 

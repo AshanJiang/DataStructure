@@ -26,7 +26,7 @@
     <ClInclude Include="SequenceList.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="LinkedList.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

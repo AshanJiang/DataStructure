@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SequenceList", "SequenceList\SequenceList.vcxproj", "{75B05945-46C3-4A6F-A874-54C10BAEA345}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinearList", "SequenceList\SequenceList.vcxproj", "{75B05945-46C3-4A6F-A874-54C10BAEA345}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9BF19C45-5833-42A1-9EC2-7039016E2184}"
+	ProjectSection(SolutionItems) = preProject
+		笔记.md = 笔记.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
