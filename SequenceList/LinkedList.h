@@ -14,3 +14,13 @@ void PrintList(LinkList L);
 void List_HeadInsert(LinkList &L, int n);
 /*尾插法*/
 void List_TailInsert(LinkList &L, int n);
+/*按序号查找节点值*/
+LNode *GetElem(LinkList L, int i);
+/*按照值查找表节点*/
+int LocateElem(LinkList L, ElemType e);
+/*将值为x的新节点插入到单链表第i个位置(显然i>0)*/
+bool ListInsert(LinkList L, int i, ElemType x);
+/*删除第i个节点*/
+bool ListDelete(LinkList L, int i);
+/*求表长*/
+int ListLength(LinkList L);

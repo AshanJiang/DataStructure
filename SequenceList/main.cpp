@@ -57,13 +57,30 @@ void SeqListTest() {
 
 //测试链表
 void PlayWithLinkedList() {
-	LinkList L, L2;
-	List_HeadInsert(L, 10);
-	cout << "头插法生成链表:";
-	PrintList(L);
-	List_TailInsert(L2, 10);
+	LinkList L;
+	//List_HeadInsert(L, 10);
+	//cout << "头插法生成链表:";
+	//PrintList(L);
+	List_TailInsert(L, 10);
 	cout << "尾部插法生成链表:";
-	PrintList(L2);
+	PrintList(L);
+	cout << "查找第0个节点值:" << GetElem(L, 0)->data << endl;
+	cout << "查找第5个节点值:" << GetElem(L, 5)->data << endl;
+	cout << "查找第12个节点值:" << GetElem(L, 12) << endl;
+	cout << "查找数字6的位置:" << LocateElem(L, 6) << endl;
+	ListInsert(L, 11, 666);
+	cout << "在11位置(最后)插入666:";
+	PrintList(L);
+	ListInsert(L, 1, 111);
+	cout << "在1位置(最前)插入111:";
+	PrintList(L);
+	ListInsert(L, 3, 333);
+	cout << "在3位置插入333:";
+	PrintList(L);
+	cout << "删除3位置的数:";
+	ListDelete(L, 3);
+	PrintList(L);
+	cout << "数组长度:" << ListLength(L) << endl;
 }
 
 void Test_1() {
