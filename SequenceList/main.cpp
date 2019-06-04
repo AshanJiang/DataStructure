@@ -236,4 +236,6 @@ int main() {
 	//Test_7();
 	//Test_8();
 	//Test_9();
+	short x = 32767, y = x+1;
+	cout << x << y;
 }
