@@ -36,7 +36,7 @@ void PlayWithQueue() {
 	TraverseQueue(sq);
 	int x;
 	DeQueue(sq, x);
-	cout << "出队元素为:" << x<<endl;
+ 	cout << "出队元素为:" << x<<endl;
 	cout << "目前队列为:";
 	TraverseQueue(sq);
 }
