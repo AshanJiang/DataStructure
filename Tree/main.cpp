@@ -30,8 +30,11 @@ int main()
 	T->lchild->rchild->lchild->data = 6;
 	T->lchild->rchild->lchild->lchild = NULL;
 	T->lchild->rchild->lchild->rchild = NULL;
-
+	cout << "先序遍历:";
 	PreOrder(T);
-
+	cout << endl;
+	cout << "非递归先序遍历:";
+	PreOrder2(T);
+	cout << endl;
 	return 0;
 }

@@ -1,5 +1,6 @@
 #include "Tree.h"
 #include <iostream>
+#include <stack>
 using namespace std;
 
 void InitBiTree(BiTree & T)
@@ -16,5 +17,23 @@ void PreOrder(BiTree T)
 		cout << T->data << " ";
 		PreOrder(T->lchild);
 		PreOrder(T->rchild);
+	}
+}
+
+void PreOrder2(BiTree T)
+{
+	stack<BiTree> S;
+	BiTree p = T;
+	while (p || !S.empty()) {
+		if (p) {
+			cout << p->data << " ";
+			S.push(p);
+			p = p->lchild;
+		}
+		else {
+			p = S.top();
+			S.pop();
+			p = p->rchild;
+		}
 	}
 }

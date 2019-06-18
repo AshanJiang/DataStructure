@@ -9,3 +9,5 @@ typedef struct BiTNode {
 }BiTNode, *BiTree;
 void InitBiTree(BiTree &T);
 void PreOrder(BiTree T);
+/*∑«µ›πÈœ»–Ú*/
+void PreOrder2(BiTree T);
