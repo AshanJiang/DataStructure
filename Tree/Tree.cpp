@@ -6,7 +6,8 @@ using namespace std;
 void InitBiTree(BiTree & T)
 {
 	T = new BiTNode;
-	T->data = 1;
+	//T->data = 1;
+	T->data = 'A';
 	T->lchild = NULL;
 	T->rchild = NULL;
 }
@@ -17,6 +18,32 @@ void PreOrder(BiTree T)
 		cout << T->data << " ";
 		PreOrder(T->lchild);
 		PreOrder(T->rchild);
+	}
+}
+
+void InOrder(BiTree T)
+{
+	if (T != NULL) {
+		InOrder(T->lchild);
+		cout << T->data << " ";
+		InOrder(T->rchild);
+	}
+}
+
+void InThread(ThreadTree & p, ThreadTree & pre)
+{
+	if (p != NULL) {
+		InThread(p->lchild, pre);
+		if (p->lchild == NULL) {
+			p->lchild = pre;
+			p->ltag = 1;
+		}
+		if (pre != NULL && pre->rchild == NULL) {
+			pre->rchild = p;
+			pre->rtag = 1;
+		}
+		pre = p;
+		InThread(p->rchild, pre);
 	}
 }
 
